@@ -66,14 +66,6 @@ We have collected data on energy production, fuel consumption, and waste creatio
       -	Dry natural gas
     -	Exports
       -	Dry natural gas
-  -	Petroleum + other data: [webpage](https://www.eia.gov/international/data/world/natural-gas/more-natural-gas-data?pd=5&p=00000000007g00000000000000000000002&u=1&f=A&v=mapbubble&a=-&i=none&vo=value&t=C&g=none&l=249--238&s=94694400000&e=1672531200000&ev=false&)
-    -	1973-2023
-    -	Production
-      -	Crude oil including lease condensate
-    -	Consumption
-      -	Distillate fuel oil
-      -	Residual fuel oil
-      -	Liquified petroleum gases
   -	Nuclear plant data: [webpage](https://www.eia.gov/totalenergy/data/browser/index.php?tbl=T08.01#/?f=A)
     -	1957-2023
     -	Total operable unites
@@ -101,10 +93,24 @@ We have collected data on energy production, fuel consumption, and waste creatio
     -	1990-2023
     -	Provides a lot of information that was downloaded separately together with a difference in values to those downloaded above
       -	Some differences may be a difference in reporting source or the fact that some of the sheets in this table are estimated values for the year
-Included are links to the webpage with the correct filters applied to each dataset. We also provide the selected filters below each energy type to clarify the content of the data collected. Next, we will dicsuss our choices for how each dataset how filtered and collected, explain how we intend to use each dataset, and discuss some discrepancies that may lead to a difference in results based on the constraints of how we could select data on the EIA website.
+Included are links to the webpage with the correct filters applied to each dataset. We also provide the selected filters below each energy type to clarify the content of the data collected. Next, we will dicsuss our choices for how each dataset how filtered and collected, explain how we intend to use each dataset, and discuss some discrepancies that may lead to a difference in results based on the constraints of how data can be selected on the EIA website.
 
 ### Collected Data Discussion
-The first data collected is for the U.S. annual energy generation per type, the total amount of energy consumed annually, and the energy capacity for nuclear and fossil fuel sources. We ignore any renewable energy sources such as wind, solar, etc. to focus our analysis on just nuclear and fossil fuels.
+The first data collected is for the U.S. annual energy generation per source, the total amount of energy produced and consumed annually, and the energy capacity for nuclear and fossil fuel sources from 1980-2023. We ignore any renewable energy sources such as wind, solar, etc. to focus our analysis on just nuclear and fossil fuels. We will use the annual energy generation per source to track the change in energy production over time and see the percentage breakdown of total produced energy. We will also pair the amount of energy generated with the amount of fuel consumed or waste produced to get a rough efficiency rating for each type of energy source.
+
+The second dataset contains fossil fuel CO2 emissions annually from 1949-2022 which we will use as a "waste" parameter to compare with the nuclear waste data. We acknowledge that there may be additional waste associated with the usage of fossil fuels in producing energy but will focus on CO2 emissions as this is the most widely known and significant waste from burning fossil fuels.
+
+The third dataset is coal production, consumption, imports, and exports for bituminous, subbituminous, and lignite coal types from 1980-2023. We focus on these three types of coal as they are often used for electricity generation rather than primarily for industrial use. We include the amount of coal imported and exported for the possibility of comparing fuel source trading in the U.S.
+
+The fourth data collected is for the amount of dry natural gas produced, consumed, imported, and exported from 1980-2023. The dry natural gas values reported are used for domestic household and business use as well as electricity generation, so we will reference the final dataset we collected to better estimate the amount of natural gas used purely for energy production.
+
+The fifth dataset we collected includes general information on active U.S. nuclear power plants from 1957-2023, the most important of which is the net nuclear energy generation and percentage of total energy produced by nuclear power. We will pair this data with the first dataset to get a more complete view of electricity produced from nuclear power.
+
+The sixth dataset is for uranium production, imports, exports, and amount loaded into nuclear reactors from 1949-2023 which will be used to compare with the fossil fuel consumption data.
+
+The seventh dataset is the amount of nuclear waste removed from nuclear power plants annually from 1968-2017. We will use these values to compare with the amount of CO2 produced by burning fossil fuels to get a value like electricity generated per amount of waste produced. The available dataset is lacking more recent years that all other datasets include, so we have reached out to the EIA to request access to more recent data if publicly available.
+
+The final dataset is a full spreadsheet of the electricity industry in the U.S., including values like those we have collected. Comparing the data available through their website search function to this spreadsheet, there is a difference in values between the same data, but these differences are largely under an order of magnitude in difference, and at first glance may be within a factor of 2~3. Because of this, we will try to exclusively use the individual data downloaded via the data search function and only use this additional spreadsheet as a reference when the other data we collected is incomplete or encompasses a wider scope of energy production than only electricity production.
 
 ## Process
 WIP
