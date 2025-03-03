@@ -86,9 +86,14 @@ We have collected data on energy production, fuel consumption, and waste creatio
         -	Total inventories
     -	Average price
         -	Average price of purchased imports
-  -	Uranium waste: [webpage](https://www.eia.gov/nuclear/spent_fuel/ussnftab3.php)
-    -	1968-2017
-    -	Online table copied
+  -	Uranium waste: [source]([https://www.eia.gov/nuclear/spent_fuel/ussnftab3.php](https://gc859.pnnl.gov/summary/table2))
+    -	1968-2022
+    -	Number of discharged assemblies
+    -	Metric tons of initial heavy metal of discharged assemblies
+    -	Average burnup of discharged assemblies
+    -	Average initial enrichment of discharged assemblies
+    -	Cumulative total number of discharged assemblies
+    -	Cumulative total metric tons of initial heavy metal of discharged assemblies
   -	State electricity profiles full data table: [webpage](https://www.eia.gov/electricity/state/unitedstates/state_tables.php)
     -	1990-2023
     -	Provides a lot of information that was downloaded separately together
@@ -108,12 +113,12 @@ The fifth dataset we collected includes general information on active U.S. nucle
 
 The sixth dataset is for uranium production, imports, exports, and amount loaded into nuclear reactors from 1949-2023 which will be used to compare with the fossil fuel consumption data.
 
-The seventh dataset is the amount of nuclear waste removed from nuclear power plants annually from 1968-2017. We will use these values to compare with the amount of CO2 produced by burning fossil fuels to get a value like electricity generated per amount of waste produced. The available dataset is lacking more recent years that all other datasets include, so we have reached out to the EIA to request access to more recent data if publicly available.
+The seventh dataset is the amount of nuclear waste removed from nuclear power plants annually from 1968-2023. We will use these values to compare with the amount of CO2 produced by burning fossil fuels to get a value like electricity generated per amount of waste produced. We will focus on the metric tons of initial heavy metal of discharged assemblies average burnup of discharged assemblies data fields since these relate to the amount of waste produced per year.
 
 The final dataset is a full spreadsheet of the electricity industry in the U.S., including values like those we have collected. Comparing the data available through their website search function to this spreadsheet, there is a difference in values between the same data, but these differences are largely under an order of magnitude in difference, and at first glance may be within a factor of 2~3. Because of this, we will try to exclusively use the individual data downloaded via the data search function and only use this additional spreadsheet as a reference when the other data we collected is incomplete or encompasses a wider scope of energy production than only electricity production.
 
 ## Process
-WIP
+To begin, we will combine each dataset into one table using Excel and group the data by year.
 
 ## Analyze
 WIP
