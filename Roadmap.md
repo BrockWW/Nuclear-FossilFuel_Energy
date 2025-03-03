@@ -66,6 +66,13 @@ We have collected data on energy production, fuel consumption, and waste creatio
         -	Dry natural gas
     -	Exports
         -	Dry natural gas
+  -	Oil: [webpage](https://www.eia.gov/international/data/world/natural-gas/more-natural-gas-data?pd=5&p=00000000006000000000000000000000002&u=1&f=A&v=mapbubble&a=-&i=none&vo=value&t=C&g=none&l=249--238&s=94694400000&e=1672531200000&ev=false&)
+    -	1973-2023
+    -	Production
+        -	Crude oil including lease condensate
+    - Consumption
+        - Distillate fuel oil
+        - Residual fuel oil
   -	Nuclear plant data: [webpage](https://www.eia.gov/totalenergy/data/browser/index.php?tbl=T08.01#/?f=A)
     -	1957-2023
     -	Total operable unites
@@ -109,11 +116,13 @@ The third dataset is coal production, consumption, imports, and exports for bitu
 
 The fourth data collected is for the amount of dry natural gas produced, consumed, imported, and exported from 1980-2023. The dry natural gas values reported are used for domestic household and business use as well as electricity generation, so we will reference the final dataset we collected to better estimate the amount of natural gas used purely for energy production.
 
-The fifth dataset we collected includes general information on active U.S. nuclear power plants from 1957-2023, the most important of which is the net nuclear energy generation and percentage of total energy produced by nuclear power. We will pair this data with the first dataset to get a more complete view of electricity produced from nuclear power.
+The fifth dataset collected contains information about the amount of oil fuel used to generate electricity, and the amount of crude oil produced annually. This data focuses only on fuel oil that is largely used to generate electricity at power plants.
 
-The sixth dataset is for uranium production, imports, exports, and amount loaded into nuclear reactors from 1949-2023 which will be used to compare with the fossil fuel consumption data.
+The sixth dataset we collected includes general information on active U.S. nuclear power plants from 1957-2023, the most important of which is the net nuclear energy generation and percentage of total energy produced by nuclear power. We will pair this data with the first dataset to get a more complete view of electricity produced from nuclear power.
 
-The seventh dataset is the amount of nuclear waste removed from nuclear power plants annually from 1968-2023. We will use these values to compare with the amount of CO2 produced by burning fossil fuels to get a value like electricity generated per amount of waste produced. We will focus on the metric tons of initial heavy metal of discharged assemblies average burnup of discharged assemblies data fields since these relate to the amount of waste produced per year.
+The seventh dataset is for uranium production, imports, exports, and amount loaded into nuclear reactors from 1949-2023 which will be used to compare with the fossil fuel consumption data.
+
+The eights dataset is the amount of nuclear waste removed from nuclear power plants annually from 1968-2023. We will use these values to compare with the amount of CO2 produced by burning fossil fuels to get a value like electricity generated per amount of waste produced. We will focus on the metric tons of initial heavy metal of discharged assemblies average burnup of discharged assemblies data fields since these relate to the amount of waste produced per year.
 
 The final dataset is a full spreadsheet of the electricity industry in the U.S., including values like those we have collected. Comparing the data available through their website search function to this spreadsheet, there is a difference in values between the same data, but these differences are largely under an order of magnitude in difference, and at first glance may be within a factor of 2~3. Because of this, we will try to exclusively use the individual data downloaded via the data search function and only use this additional spreadsheet as a reference when the other data we collected is incomplete or encompasses a wider scope of energy production than only electricity production.
 
