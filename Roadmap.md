@@ -16,28 +16,12 @@ We want to answer the following questions by analyzing nuclear and fossil fuel e
 3. Would increasing the amount of nuclear energy produced help reduce greenhouse gas emissions from fossil fuels and how would the amount of nuclear waste compare?
 
 ## Prepare
-We have collected data on energy production, fuel consumption, and waste creation in the U.S. from the U.S. Energy Information Administration [website](www.eia.gov). The detailed breakdown is as follows:
-  -	Energy production by type: [webpage](https://www.eia.gov/international/data/country/USA/electricity/more-electricity-data?pd=2&p=00000020000000000000070000000e000000000000000000000000000000000u&u=1&f=A&v=mapbubble&a=-&i=none&vo=value&t=C&g=none&l=249--238&s=315532800000&e=1672531200000&ev=false)
-    -	1980-2023
-    -	Generation
-    	  -	Generation (Total)
-        -	Nuclear
-        -	Coal
-        -	Natural gas
-        -	Oil
-        -	Other gases
-    -	Energy consumption (Total)
-    -	Energy capacity
-        -	Capacity (Total)
-        -	Nuclear
-        -	Fossil fuels
-  -	Fossil fuel emissions: [webpage](https://www.eia.gov/international/data/world/other-statistics/emissions-by-fuel?pd=40&p=0000000000000000000000000000000000000000000000000000000b0001&u=0&f=A&v=mapbubble&a=-&i=none&vo=value&t=C&g=none&l=249--238&s=-662688000000&e=1640995200000&)
-    -	1949-2022
-    -	CO2 emissions
-        -	CO2 emissions (Total)
-        -	Coal and coke
-        -	Consumed natural gas
-        -	Petroleum and other liquids
+We have collected data on energy production, fuel consumption, and waste creation in the U.S. from the U.S. Energy Information Administration [website](www.eia.gov) and the Pacific Northwest National Labs [website](https://www.pnnl.gov). The detailed breakdown is as follows:
+-	State electricity profiles data: [webpage](https://www.eia.gov/electricity/state/unitedstates/state_tables.php)
+    -	1990-2023
+    -	Sheet 5: Generation
+    -	Sheet 7: Emissions
+    -	Additional unused sheets
   -	Coal data: [webpage](https://www.eia.gov/international/data/world/natural-gas/more-natural-gas-data?pd=1&p=1g0000000000000000000000000000000000009j3e&u=1&f=A&v=mapbubble&a=-&i=none&vo=value&t=C&g=none&l=249--238&s=315532800000&e=1672531200000&ev=false&)
     -	1980-2023
     -	Production
@@ -66,7 +50,7 @@ We have collected data on energy production, fuel consumption, and waste creatio
         -	Dry natural gas
     -	Exports
         -	Dry natural gas
-  -	Oil: [webpage](https://www.eia.gov/international/data/world/natural-gas/more-natural-gas-data?pd=5&p=00000000006000000000000000000000002&u=1&f=A&v=mapbubble&a=-&i=none&vo=value&t=C&g=none&l=249--238&s=94694400000&e=1672531200000&ev=false&)
+  -	Petroleum: [webpage](https://www.eia.gov/international/data/world/natural-gas/more-natural-gas-data?pd=5&p=00000000006000000000000000000000002&u=1&f=A&v=mapbubble&a=-&i=none&vo=value&t=C&g=none&l=249--238&s=94694400000&e=1672531200000&ev=false&)
     -	1973-2023
     -	Production
         -	Crude oil including lease condensate
@@ -93,7 +77,7 @@ We have collected data on energy production, fuel consumption, and waste creatio
         -	Total inventories
     -	Average price
         -	Average price of purchased imports
-  -	Uranium waste: [source]([https://www.eia.gov/nuclear/spent_fuel/ussnftab3.php](https://gc859.pnnl.gov/summary/table2))
+  -	Uranium waste: [source](https://gc859.pnnl.gov/summary/table2)
     -	1968-2022
     -	Number of discharged assemblies
     -	Metric tons of initial heavy metal of discharged assemblies
@@ -101,30 +85,24 @@ We have collected data on energy production, fuel consumption, and waste creatio
     -	Average initial enrichment of discharged assemblies
     -	Cumulative total number of discharged assemblies
     -	Cumulative total metric tons of initial heavy metal of discharged assemblies
-  -	State electricity profiles full data table: [webpage](https://www.eia.gov/electricity/state/unitedstates/state_tables.php)
-    -	1990-2023
-    -	Provides a lot of information that was downloaded separately together
 
-Included are links to the webpage with the correct filters applied to each dataset. We also provide the selected filters below each energy type to clarify the content of the data collected. Next, we will dicsuss our choices for how each dataset how filtered and collected, explain how we intend to use each dataset, and discuss some discrepancies that may lead to a difference in results based on the constraints of how data can be selected on the EIA website.
+Included are links to the webpage with the correct filters applied to each dataset. We also provide the selected filters below each energy type to clarify the content of the data collected. Next, we will dicsuss our choices for how each dataset how filtered and collected, explain how we intend to use each dataset.
 
 ### Collected Data Discussion
-The first data collected is for the U.S. annual energy generation per source, the total amount of energy produced and consumed annually, and the energy capacity for nuclear and fossil fuel sources from 1980-2023. We ignore any renewable energy sources such as wind, solar, etc. to focus our analysis on just nuclear and fossil fuels. We will use the annual energy generation per source to track the change in energy production over time and see the percentage breakdown of total produced energy. We will also pair the amount of energy generated with the amount of fuel consumed or waste produced to get a rough efficiency rating for each type of energy source.
 
-The second dataset contains fossil fuel CO2 emissions annually from 1949-2022 which we will use as a "waste" parameter to compare with the nuclear waste data. We acknowledge that there may be additional waste associated with the usage of fossil fuels in producing energy but will focus on CO2 emissions as this is the most widely known and significant waste from burning fossil fuels.
+The state electricity profiles dataset includes electricity generation and fossil fuel emissions data from 1990-2023. The generation data includes values for nuclear, coal, natural gas, petroleum, other, along with a total value that inclued renewable sources that we will not focus on. We will also be using CO2 emissions per energy source as a measure of waste from generating electricty from fossil fuels. This dataset does not include amounts of fuel consumed, so most of the other datasets we collected will be for measuring this. The full spreadsheet contains many additional sheets that contains additional information we will not use in our analysis.
 
-The third dataset is coal production, consumption, imports, and exports for bituminous, subbituminous, and lignite coal types from 1980-2023. We focus on these three types of coal as they are often used for electricity generation rather than primarily for industrial use. We include the amount of coal imported and exported for the possibility of comparing fuel source trading in the U.S.
+The coal dataset includes production, consumption, imports, and exports for bituminous, subbituminous, and lignite coal types from 1980-2023. We focus on these three types of coal as they are often used for electricity generation rather than primarily for industrial use. We include the amount of coal imported and exported for the possibility of comparing fuel source trading in the U.S.
 
-The fourth data collected is for the amount of dry natural gas produced, consumed, imported, and exported from 1980-2023. The dry natural gas values reported are used for domestic household and business use as well as electricity generation, so we will reference the final dataset we collected to better estimate the amount of natural gas used purely for energy production.
+The natrual gas dataset includes the amount of dry natural gas produced, consumed, imported, and exported from 1980-2023. Dry natural gas was the only natural gas type available from the EIA website, so we will use these values as the true amount used to produce electricity, but note that some is also used for household and industrial use.
 
-The fifth dataset collected contains information about the amount of oil fuel used to generate electricity, and the amount of crude oil produced annually. This data focuses only on fuel oil that is largely used to generate electricity at power plants.
+The petroleum dataset includes the amount of processed oil used to generate electricity, and the amount of crude oil produced annually from 1980-2021. This data focuses only on fuel oil that is largely used to generate electricity at power plants and corrsponds to the fuel used to produce power listed under the "petroleum" field of the state electricity profiles dataset.
 
-The sixth dataset we collected includes general information on active U.S. nuclear power plants from 1957-2023, the most important of which is the net nuclear energy generation and percentage of total energy produced by nuclear power. We will pair this data with the first dataset to get a more complete view of electricity produced from nuclear power.
+The nuclear plant dataset includes general information on active U.S. nuclear power plants from 1957-2023, the most important of which is the net nuclear energy generation and percentage of total energy produced by nuclear power. We will pair this data with the first dataset to get a more complete view of electricity produced from nuclear power.
 
-The seventh dataset is for uranium production, imports, exports, and amount loaded into nuclear reactors from 1949-2023 which will be used to compare with the fossil fuel consumption data.
+The uranium consumption dataset includes amounts of uranium production, imports, exports, and uranium loaded into nuclear reactors from 1949-2023 which will be used to compare with the fossil fuel consumption data.
 
-The eights dataset is the amount of nuclear waste removed from nuclear power plants annually from 1968-2023. We will use these values to compare with the amount of CO2 produced by burning fossil fuels to get a value like electricity generated per amount of waste produced. We will focus on the metric tons of initial heavy metal of discharged assemblies average burnup of discharged assemblies data fields since these relate to the amount of waste produced per year.
-
-The final dataset is a full spreadsheet of the electricity industry in the U.S., including values like those we have collected. Comparing the data available through their website search function to this spreadsheet, there is a difference in values between the same data, but these differences are largely under an order of magnitude in difference, and at first glance may be within a factor of 2~3. Because of this, we will try to exclusively use the individual data downloaded via the data search function and only use this additional spreadsheet as a reference when the other data we collected is incomplete or encompasses a wider scope of energy production than only electricity production.
+The uranium waste dataset includes the amount of nuclear waste removed from nuclear power plants annually from 1968-2023. We will use these values to compare with the amount of CO2 produced by burning fossil fuels to get a value like electricity generated per amount of waste produced. We will focus on the metric tons of initial heavy metal of discharged assemblies average burnup of discharged assemblies data fields since these relate to the amount of waste produced per year.
 
 ## Process
 To begin, we will combine each dataset into one table using Excel and group the data by year.
