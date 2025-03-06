@@ -39,7 +39,9 @@ The monthly energy review data includes several tables provided by the EIA that 
 The uranium waste dataset includes the amount of nuclear waste removed from nuclear power plants annually from 1968-2023. We will use these values to compare with the amount of CO2 produced by burning fuels to get a value like electricity generated per amount of waste produced. We will focus on the metric tons of initial heavy metal of discharged assemblies average burnup of discharged assemblies data fields since these relate to the amount of waste produced per year.
 
 ## Process
-To begin, we will combine each dataset into one table using Excel and group the data by year.
+The changelog for our data cleaning and processing can be found under [Data_Process_Changelog.pdf](Data_Process_Changelog.pdf). We largely standardized the units between each sheet to be in SI, typically being kilowatthours of electricity generated or metric tons of a substance consumed/produced, and standardized the formats of each sheet to easily compare data from different sheets using the year the data is from along with their column names. Cells that reported data as "not available' or "withheld" were all replaced with empty cells rather than zero to clarify where data was missing and where data was zero.
+
+We are somewhat limited with the uranium consumption data, as the earliest available data is from 1991, while the other data dates back to the 1960s or earlier. We will utalize as much of the data as we can and point out where data does and does not exist in our analysis. 
 
 ## Analyze
 WIP
