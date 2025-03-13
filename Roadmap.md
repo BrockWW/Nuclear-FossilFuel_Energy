@@ -34,9 +34,35 @@ We have collected data on energy production, fuel consumption, and waste creatio
 
 ### Collected Data Discussion
 
-The monthly energy review data includes several tables provided by the EIA that focuses on the electricity sector in the United States of America. Table 7.2b contains data on electricity production by different source such as coal, natural gas, nuclear, etc. collected from 1949-2023. Table 7.4b covers the amount of combustible fuels used to generate the electricity given in Table 7.2b from 1949-2023. Table 8.2 includes data on uranium loaded into U.S. reactors from 1949-2023 and will be used as a tracer of amount of fuel consumed. Table 11.6 covers the amount of carbon dioxide emitted from the burning of fuels to generate electricity from 1973-2023. The range of years each field contains data in varies, so a smaller subset of years will be investigated to ensure all fields contain data. 
+The monthly energy review data includes several tables provided by the EIA that focuses on the electricity sector in the United States of America. Table 7.2b contains data on electricity production by different source such as coal, natural gas, nuclear, etc. collected from 1949-2023. Table 7.4b covers the amount of combustible fuels used to generate the electricity given in Table 7.2b from 1949-2023. Table 8.2 includes data on uranium loaded into U.S. reactors from 1949-2023 and will be used as a tracer of amount of fuel consumed. Table 11.6 covers the amount of carbon dioxide emitted from the burning of fuels to generate electricity from 1973-2023. The range of years each field contains data in varies, so a smaller subset of years will be investigated to ensure all fields contain data.
 
 The uranium waste dataset includes the amount of nuclear waste removed from nuclear power plants annually from 1968-2023. We will use these values to compare with the amount of CO2 produced by burning fuels to get a value like electricity generated per amount of waste produced. We will focus on the metric tons of initial heavy metal of discharged assemblies average burnup of discharged assemblies data fields since these relate to the amount of waste produced per year.
+
+The exact fields we will use in our analysis as named in the original tables are as follows:
+- Table 7.2b
+    - Electricity Net Generation From Coal, Electric Power Sector
+    - Electricity Net Generation From Petroleum, Electric Power Sector
+    - Electricity Net Generation From Natural Gas, Electric Power Sector
+    - Electricity Net Generation From Nuclear Electric Power, Electric Power Sector
+    - Electricity Net Generation Total (including from sources not shown), Electric Power Sector
+- Table 7.4b
+    - Coal Consumption for Electricity Generation and Useful Thermal Output, Electric Power Sector
+    - Distillate Fuel Oil Consumption for Electricity Generation and Useful Thermal Output, Electric Power Sector
+    - Residual Fuel Oil Consumption for Electricity Generation and Useful Thermal Output, Electric Power Sector
+    - Other Petroleum Liquids Consumption for Electricity Generation and Useful Thermal Output, Electric Power Sector
+    - Petroleum Coke Consumption for Electricity Generation and Useful Thermal Output, Electric Power Sector
+    - Natural Gas Consumption for Electricity Generation and Useful Thermal Output, Electric Power Sector
+- Table 8.2
+    - Loaded into U.S. Nuclear Reactors
+- Table 11.6
+    - Coal Electric Power Sector CO2 Emissions
+    - Natural Gas Electric Power Sector CO2 Emissions
+    - Petroleum Electric Power Sector CO2 Emissions
+    - Total Energy Electric Power Sector CO2 Emissions
+- PNNL Uranium Waste
+    - Total Metric tons of initial heavy metal (MTiHM) of discharged assemblies
+ 
+We leave out any renewable sources as well as some smaller combustible fuel sources such as wood and other waste since renewable energy is outside the scope of this project and the other combustible fuels make up a small minority of the total electricity generation and CO2 emitted. From Table 7.4b, we take each type of petroleum rather than the total petroleum consumed field so we can convert each component to metric ton first, then add them together to get a more accurate conversion between barrels and metric tons. For CO2 emissions in Table 11.6, we take the total amount of CO2 produced from all petroleum sources since no conversion was needed.
 
 ## Process
 The changelog for our data cleaning and processing can be found under [Data_Processing_Changelog.pdf](Data_Processing_Changelog.pdf). We largely standardized the units between each sheet to be in SI, typically being kilowatthours of electricity generated or metric tons of a substance consumed/produced, and standardized the formats of each sheet to easily compare data from different sheets using the year the data is from along with their column names. Cells that reported data as "not available' or "withheld" were all replaced with #N/A values rather than zero to clarify where data was missing and where data was reported as zero.
@@ -57,17 +83,12 @@ The unit breakdown and any non-SI conversions completed for the data are listed 
 - Billion Cubic Feet -> Metric Tons (Oil Equivalent)
     - 1 Billion Cubic Feet = 0.024 Million Metric Tons (Oil Equivalent)
     - Used for natural gas fuel consumption
-- Trillion British Thermal Units -> Metric Tons (Oil Equivalent)
-    - 1 Trillion British Thermal Units = 0.025 Million Metric Tons (Oil Equivalent)
-    - Used for other fossil gases, wood, waste, and other consumption fuels as approximate conversion
 - Million Metric Tons -> Metric Tons
     - Used for all CO2 emission values
 - Million Pounds Uranium Oxide -> Metric Tons Uranium
     - 1 Pound Uranium Oxide = 0.384647 Kilograms Uranium
     - 1 Metric Ton = 1000 Kilograms
     - Used for all uranium consumption values
- 
-When converting BTU to metric tons, an approximate conversion was used to establish an oil equivalent since other than wood, the specific materials consumed were not listed, so we used a single conversion for all of these to simplify our process. 
 
 ## Analyze
 To streamline the analysis process we combined the fossil fuel fuel consumption data with the uranium consumption data and stretched the dates to go from 1949 to 2023, inserting a #N/A value when a year was missing data from any field. Similarly, we combined the fossil fuel CO2 and nuclear waste produced data and again stretched the dates to go from 1949 to 2023. Combining the data allows us to create plots and calculate new fields that all span from 1949 to 2023, where any missing data is not shown in plots and is given as a #N/A if any value in the calculations are missing.
@@ -79,8 +100,6 @@ We calculated several new fields that look at the relationships between electric
     - Electricity Generated to Coal Consumed (kWh/t)
     - Electricity Generated to Petroleum Consumed (kWh/t)
     - Electricity Generated to Natural Gas Consumed (kWh/t)
-    - Electricity Generated to Other Fossil Gases Consumed (kWh/t)
-    - Electricity Generated to Wood Consumed (kWh/t)
     - Electricity Generated to Uranium Consumed (kWh/t)
 - Metric ton of CO2 produced per metric ton of fuel consumed
     - CO2 Produced to Coal Consumed (%)
