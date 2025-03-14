@@ -93,7 +93,7 @@ The unit breakdown and any non-SI conversions completed for the data are listed 
 ## Analyze
 To streamline the analysis process we combined the fossil fuel fuel consumption data with the uranium consumption data and stretched the dates to go from 1949 to 2023, inserting a #N/A value when a year was missing data from any field. Similarly, we combined the fossil fuel CO2 and nuclear waste produced data and again stretched the dates to go from 1949 to 2023. Combining the data allows us to create plots and calculate new fields that all span from 1949 to 2023, where any missing data is not shown in plots and is given as a #N/A if any value in the calculations are missing.
 
-Starting with the base data, we looked at trends in electricity generated per year by source, fuel consumed per year per source, and waste produced oer year by source to better understand the data we are working with. We are able to plot values associated with coal, natural gas, petroleum, wood, other fossil gases, and uranium sources for the first two plots, but lack the CO2 emission data for burning wood and other fossil gases so they are not represented in the waste produced plot.
+Starting with the base data, we looked at trends in electricity generated per year by source, fuel consumed per year per source, and waste produced per year by source for coal, natural gas, petroleum, and nuclear sources.
 
 We calculated several new fields that look at the relationships between electricity production, fuel consumption, and waste production which we list below with their units:
 - Kilowatthours of electricity generated per metric ton of fuel consumed
@@ -111,8 +111,14 @@ We calculated several new fields that look at the relationships between electric
     - Electricity Generated from Petroleum to CO2 Produced (kWh/t)
     - Electricity Generated from Natural Gas to CO2 Produced (kWh/t)
     - Electricity Generated from Uranium to Waste Produced (kWh/t)
+- Percentage of total electricity generated
+    - Percent of Total Generated Electricity from Coal (%)
+    - Percent of Total Generated Electricity from Petroleum (%)
+    - Percent of Total Generated Electricity from Natural Gas (%)
+    - Percent of Total Generated Electricity from Nuclear (%)
+    - Total Amount of Electricity Accounted For (%)
 
-
+We also test what would happen to fuel consumption and waste production if we increased the amount of electricity generated from nuclear power and decreased the amount of electricity generated from coal, petroleum, and natural gas. We increased the historical amount of electricity from nuclear power generated per year by 10%, 25%, 50%, and 100%, then subtracted the additional power in equal parts to each other source. Doing this allowed us to keep the percentage of total electricity produced per year by the combined coal, petroleum, natural gas, and nuclear sources the same when adjusting the amount of nuclear power produced. We did this to not interfere with any other electricity generating sources that we do not investigate, such as renewables. From each of the changes to nuclear power produced, we create a plot of electricity generated per year by source, fuel consumed per year per source, and waste produced per year by source using the calculated relationships between electricity generated, fuel consumed, and waste produced from the original data.
 
 ## Share
 WIP
