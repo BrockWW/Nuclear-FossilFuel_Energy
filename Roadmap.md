@@ -121,7 +121,15 @@ We calculated several new fields that look at the relationships between electric
 We also test what would happen to fuel consumption and waste production if we increased the amount of electricity generated from nuclear power and decreased the amount of electricity generated from coal, petroleum, and natural gas. We increased the historical amount of electricity from nuclear power generated per year by 10%, 25%, 50%, and 100%, then subtracted the additional power in equal parts to each other source. Doing this allowed us to keep the percentage of total electricity produced per year by the combined coal, petroleum, natural gas, and nuclear sources the same when adjusting the amount of nuclear power produced. We did this to not interfere with any other electricity generating sources that we do not investigate, such as renewables. From each of the changes to nuclear power produced, we create a plot of electricity generated per year by source, fuel consumed per year per source, and waste produced per year by source using the calculated relationships between electricity generated, fuel consumed, and waste produced from the original data.
 
 ## Share
-WIP
+We arranged our findings according to each of the three main questions we set out to answer. Our findings will be collected into a short presentation.
+
+To answer our first question, we will look at the historical data we collected and the trends of coal, petroleum, natural gas, and nuclear and their net electricity generation per year, percentage of total electricity generation per year, total amount of fuel consumed per year, and total amount of waste produced per year.
+
+To answer our second question, we will use the created fields that measure for each source the net electricity generated per metric ton of fuel consumed, the net electricity generated per metric ton of waste produced, and the ratio of metric ton of waste produced to metric ton of fuel used.
+
+1. What are the historical trends between each type of energy source and how does their energy production, fuel consumption, and waste production compare?
+2. Is nuclear energy a cleaner, more effective source of energy when comparing the amount of fuel consumed and waste produced to the energy output?
+3. Would increasing the amount of nuclear energy produced help reduce greenhouse gas emissions from fossil fuels and how would the amount of nuclear waste compare?
 
 ## Act
 WIP
