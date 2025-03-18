@@ -127,6 +127,8 @@ To answer our first question, we will look at the historical data we collected a
 
 To answer our second question, we will use the created fields that measure for each source the net electricity generated per metric ton of fuel consumed, the net electricity generated per metric ton of waste produced, and the ratio of metric ton of waste produced to metric ton of fuel used.
 
+To answer our last question, we will compare the estimated net electricity generation, fuel consumption, and waste production calculated by historically increasing the amount of electricity from nuclear by 10% and 25%. We will not discuss the 50% and 100% increase in nuclear power because they are unreasonable goals to achieve in the immediate future and would need to be built off of an initial small increase in nuclear power.
+
 1. What are the historical trends between each type of energy source and how does their energy production, fuel consumption, and waste production compare?
 2. Is nuclear energy a cleaner, more effective source of energy when comparing the amount of fuel consumed and waste produced to the energy output?
 3. Would increasing the amount of nuclear energy produced help reduce greenhouse gas emissions from fossil fuels and how would the amount of nuclear waste compare?
