@@ -3,7 +3,7 @@ Data project analyzing nuclear energy and fossil fuel trends.
 
 [Roadmap](Roadmap.md) includes a step by step walkthrough of this project created to guide it towards completion.
 
-Collection of findings are provided in [Nuclear_Fossil-Fuel_Report](Nuclear_Fossil-Fuel_report.pdf)
+Collection of findings are provided in [Nuclear_Fossil-Fuel_Report](Nuclear_Fossil-Fuel_Report.pdf)
 
 References:
 U.S. Department of Energy. (2022). *Nuclear Fuel Data Survey*.
