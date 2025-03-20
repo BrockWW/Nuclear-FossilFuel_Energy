@@ -7,11 +7,11 @@ Collection of findings are provided in [Nuclear_Fossil-Fuel_Report](Nuclear_Foss
 
 ### **References:**
 
-U.S. Department of Energy. (2022). *Nuclear Fuel Data Survey*.
-&ensp; https://gc859.pnnl.gov/summary/table2
+U.S. Department of Energy. (2022). *Nuclear Fuel Data Survey*.\
+&ensp; &ensp; https://gc859.pnnl.gov/summary/table2
   
-U.S. Energy Information Administration. (2025). *Monthly Energy Review February 2025*.
-&ensp; https://www.eia.gov/totalenergy/data/monthly/pdf/mer.pdf
+U.S. Energy Information Administration. (2025). *Monthly Energy Review February 2025*.\
+&ensp; &ensp; https://www.eia.gov/totalenergy/data/monthly/pdf/mer.pdf
   
-World Nuclear Association. (2024, August 27). *Nuclear Power in the USA*.
-&ensp; https://world-nuclear.org/information-library/country-profiles/countries-t-z/usa-nuclear-power#notes-amp-references
+World Nuclear Association. (2024, August 27). *Nuclear Power in the USA*.\
+&ensp; &ensp; https://world-nuclear.org/information-library/country-profiles/countries-t-z/usa-nuclear-power#notes-amp-references
