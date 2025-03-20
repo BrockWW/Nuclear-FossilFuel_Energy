@@ -3,6 +3,8 @@ Data project analyzing nuclear energy and fossil fuel trends.
 
 [Roadmap](Roadmap.md) includes a step by step walkthrough of this project created to guide it towards completion.
 
+[Combined_Energy_Data](Combined_Energy_Data.xlsx) containts all of the original data, any unit conversions, and additional analysis done to the data for full transparency. All data sources are open sources available at the references below.
+
 Collection of findings are provided in [Nuclear_Fossil-Fuel_Report](Nuclear_Fossil-Fuel_Report.pdf)
 
 ### **References:**
