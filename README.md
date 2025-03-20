@@ -5,7 +5,8 @@ Data project analyzing nuclear energy and fossil fuel trends.
 
 Collection of findings are provided in [Nuclear_Fossil-Fuel_Report](Nuclear_Fossil-Fuel_Report.pdf)
 
-References:
+###**References:**
+
 U.S. Department of Energy. (2022). *Nuclear Fuel Data Survey*.
     https://gc859.pnnl.gov/summary/table2
   
