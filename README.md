@@ -1,5 +1,5 @@
 # Nuclear-FossileFuel_Energy
-Data project analyzing nuclear energy and fossil fuel trends.
+Data project analyzing nuclear energy and fossil fuel trends. This is not a full lifecycle analysis, but rather focuses on fuel and emissions for electricity generation only.
 
 [Roadmap](Roadmap.md) includes a step by step walkthrough of this project created to guide it towards completion.
 
